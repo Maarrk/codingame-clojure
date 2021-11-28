@@ -26,6 +26,7 @@
         (string/lower-case (last parts))
         nil))))
 
+#_{:clj-kondo/ignore [:unused-binding]}
 (defn -main [& args]
   (let [; Number of elements which make up the association table.
         N (Integer/parseInt (read-line))

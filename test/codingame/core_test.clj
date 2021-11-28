@@ -1,3 +1,4 @@
+#_{:clj-kondo/ignore [:refer-all]}
 (ns codingame.core-test
   (:require [clojure.test :refer :all]
             [codingame.core :refer :all]))
