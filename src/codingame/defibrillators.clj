@@ -24,7 +24,8 @@
         y (Math/toRadians (- lat2 lat1))]
     (* (Math/sqrt (+ (* x x) (* y y)))) 6371))
 
-(defn -main [& args]
+(defn -main
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [lon (french->double (read-line))
         lat (french->double (read-line))
         N (Integer/parseInt (read-line))

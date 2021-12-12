@@ -1,11 +1,11 @@
 (ns codingame.horse-racing-duals ;; (ns Solution
-  (:require [clojure.string :as str])
   (:gen-class))
 
 (defn output [msg] (println msg) (flush))
 (defn debug [msg] (binding [*out* *err*] (println msg) (flush)))
 
-(defn -main [& args]
+(defn -main 
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [N (Integer/parseInt (read-line))
         lines (repeatedly N read-line)]
     (as-> lines v

@@ -36,8 +36,8 @@
                                (apply str (repeat number "0"))))
                         repeats)))
 
-#_{:clj-kondo/ignore [:unused-binding]}
-(defn -main [& args]
+(defn -main
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [MESSAGE (read-line)]
 
     ; (debug "Debug messages...")

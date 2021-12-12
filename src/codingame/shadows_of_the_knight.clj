@@ -27,7 +27,8 @@
   [(int (/ (+ (:xmin arena) (:xmax arena)) 2))
    (int (/ (+ (:ymin arena) (:ymax arena)) 2))])
 
-(defn -main [& args]
+(defn -main
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [; W: width of the building.
         ; H: height of the building.
         [W H] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))

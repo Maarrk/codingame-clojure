@@ -60,8 +60,8 @@
 (def links-atom (atom []))
 (def exits-atom (atom []))
 
-#_{:clj-kondo/ignore [:unused-binding]}
-(defn -main [& args]
+(defn -main
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [; N: the total number of nodes in the level, including the gateways
         ; L: the number of links
         ; E: the number of exit gateways

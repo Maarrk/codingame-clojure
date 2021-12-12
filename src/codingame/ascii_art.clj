@@ -17,8 +17,8 @@
   [input-text]
   (clojure.string/replace (clojure.string/upper-case input-text) #"[^a-zA-Z]" (str (char (inc (int \Z))))))
 
-#_{:clj-kondo/ignore [:unused-binding]}
-(defn -main [& args]
+(defn -main
+  #_{:clj-kondo/ignore [:unused-binding]} [& args]
   (let [L (Integer/parseInt (read-line))
         H (Integer/parseInt (read-line))
         T (read-line)
