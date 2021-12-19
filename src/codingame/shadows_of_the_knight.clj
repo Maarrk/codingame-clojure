@@ -33,7 +33,7 @@
         ; H: height of the building.
         [W H] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))
         ; maximum number of turns before game over.
-        N (Integer/parseInt (read-line))
+        _ (Integer/parseInt (read-line))
         [X0 Y0] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))]
     (loop [current-position [X0 Y0]
            ; rectangle where the bomb is located

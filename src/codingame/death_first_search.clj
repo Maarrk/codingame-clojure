@@ -65,15 +65,15 @@
   (let [; N: the total number of nodes in the level, including the gateways
         ; L: the number of links
         ; E: the number of exit gateways
-        [N L E] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))
+        [_ L E] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))
         ;; graph (create-graph (read-links! L))
         ;; exits (repeatedly E (Integer/parseInt (read-line)))
         ]
-    (dotimes [i L]
+    (dotimes [_ L]
       (let [; N1: N1 and N2 defines a link between these nodes
             [N1 N2] (map #(Integer/parseInt %) (filter #(not-empty %) (string/split (read-line) #" ")))]
         (reset! links-atom (conj @links-atom [N1 N2]))))
-    (dotimes [i E]
+    (dotimes [_ E]
       (let [; the index of a gateway node
             EI (Integer/parseInt (read-line))]
         (reset! exits-atom (conj @exits-atom EI))))

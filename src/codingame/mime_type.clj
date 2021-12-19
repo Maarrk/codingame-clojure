@@ -34,7 +34,7 @@
         Q (Integer/parseInt (read-line))
         type-mapping (lines->mapping (repeatedly N read-line))]
 
-    (dotimes [i Q]
+    (dotimes [_ Q]
       (let [; One file name per line.
             filename (read-line)
             extension (filename->extension filename)]
